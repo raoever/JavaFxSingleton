@@ -2,11 +2,8 @@ package com.example.javafxsingleton;
 
 import com.example.javafxsingleton.view.MainScene;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
