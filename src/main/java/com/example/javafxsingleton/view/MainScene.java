@@ -9,7 +9,9 @@ public class MainScene extends AbstractScene {
         super(app);
         var btnRelatorios = new Button("Relatórios");
         var btnConfig = new Button("Configurações");
-        setRoot(new TilePane(btnRelatorios, btnConfig));
+        TilePane tilePane = new TilePane(btnRelatorios, btnConfig);
+        tilePane.setStyle("-fx-font-family: 'serif'");
+        setRoot(tilePane);
 
         btnRelatorios.setOnAction(event -> app.setScene(new RelatoriosScene(app)));
         btnConfig.setOnAction(event -> app.setScene(new ConfigScene(app)));

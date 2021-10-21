@@ -19,8 +19,7 @@ public class App extends Application {
         this.stage = stage;
         var label = new Label("Hello JavaFX");
         var scene = new MainScene(this);
-        Font font = new Font("Serif", 20);
-        label.setFont(font);
+        scene.getRoot().setStyle("-fx-font-family: 'serif'");
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

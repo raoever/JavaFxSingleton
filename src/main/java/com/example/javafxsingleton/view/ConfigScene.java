@@ -19,10 +19,12 @@ public class ConfigScene extends AbstractScene {
         var label2 = new Label("Tipo de Gráficos");
         var fieldTipoGraficos = new TextField(config.getTipoGraficos());
         var btnOk = new Button("Ok");
-        Font font = new Font("Serif", 20);
-        label1.setFont(font);
-        label2.setFont(font);
-        setRoot(new VBox(label1, fieldFormatoRelatorios, label2, fieldTipoGraficos, btnOk));
+//        label1.setStyle("-fx-font-family: 'serif'");
+//        label2.setStyle("-fx-font-family: 'serif'");
+        VBox vBox = new VBox(label1, fieldFormatoRelatorios, label2, fieldTipoGraficos, btnOk);
+        vBox.setStyle("-fx-font-family: 'serif'");
+
+        setRoot(vBox);
         btnOk.setOnAction(event -> {
             config.setFormatRelatorios(fieldFormatoRelatorios.getText());
             config.setTipoGraficos(fieldTipoGraficos.getText());
